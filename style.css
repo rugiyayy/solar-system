@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: black; */
+    background: url(pics/galaxy3.avif);
+}
+
+.earth{
+    width: 150px;
+    height: 150px;
+}
+.moon{
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+}
+.mercury{
+    width: 30px;
+    height: 30px;
+}
+.jupiter{
+    width: 85px;
+    height: 85px;
+}
+
+.neptune{
+    width: 35px;
+    height: 35px;
+}
+
+
+.earth>img {
+    width: 80px;
+}
+.jupiter>img{
+    width: 50px;
+}
+.moon>img, .mercury>img, .neptune>img{
+    width: 30px;
+}
+
+
+.solar-system{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sun{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,155,255,0.5),
+    0 0 30px rgba(238, 255, 0, 0.258),
+    0 0 45px rgba(238, 255, 0, 0.258),
+    0 0 60px rgba(238, 255, 0, 0.258),
+    0 0 15px rgba(238, 255, 0, 0.258);
+}
+
+.earth-line{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    animation: rotate-Planet-and-Moon 10s linear infinite;
+}
+.moon-line{
+    position: absolute;
+    top: -21px;
+    left: -21px;
+    width: 120px;
+    height: 120px;
+    animation: rotateMoon 7s linear infinite;
+}
+.jupiter-line{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width:620px;
+    height: 65px;
+    animation: rotate-Planet-and-Moon 4s linear infinite;
+}
+.mercury-line{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width:100px;
+    height: 100px;
+    animation: rotate-Planet-and-Moon 20s linear infinite;
+}
+.neptune-line{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 710px;
+    height: 40px;
+    animation: rotate-Planet-and-Moon 10s linear infinite;
+}
+
+
+@keyframes rotate-Planet-and-Moon{
+    from{
+        transform: rotateZ(0);
+       }
+    
+       to{
+        transform: rotateZ(360deg);
+       }
+}
+
+    
+.earth>img{
+    animation: rotation-on-its-own-Axis 2s linear infinite;
+}
+
+.moon>img{
+    animation: rotation-on-its-own-Axis 6s linear infinite;
+}
+
+.jupiter>img{
+    animation: rotation-on-its-own-Axis 7s linear infinite;
+}
+
+.mercury>img{
+    animation: rotation-on-its-own-Axis 4s linear infinite;
+}
+
+.neptune>img{
+    animation: rotation-on-its-own-Axis 5s linear infinite;
+}
+
+@keyframes rotation-on-its-own-Axis{
+    from{
+        transform: rotateZ(0);
+       }
+    
+       to{
+        transform: rotateZ(360deg);
+       }
+}
+
